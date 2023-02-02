@@ -11,6 +11,14 @@ terraform {
 
 provider "aws" {
   region  = "eu-west-2"
+  shared_credentials_files = ["%USERPROFILE%\.aws\credentials"]
+  profile = "icy101"
+}
+
+provider "aws" {
+  region  = "eu-west-2"
+  shared_credentials_files = ["%USERPROFILE%\.aws\credentials"]
+  profile = "icy101"
 }
 
 resource "aws_instance" "app_server" {
